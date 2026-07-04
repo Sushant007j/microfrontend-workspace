@@ -1,3 +1,54 @@
-.sidebar { display:flex; flex-direction:column; gap:0.75rem; padding:1rem; background:#111827; color:white; border-radius:0.75rem; min-width:220px; }
-.sidebar a { color:#bfdbfe; text-decoration:none; font-weight:600; }
-.meta { margin-top:0.5rem; font-size:0.9rem; color:#cbd5e1; }
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.25rem;
+	background: #0b1220;
+	color: #e6eef8;
+	border-radius: 12px;
+	min-width: 220px;
+	box-shadow: 0 8px 30px rgba(2, 6, 23, 0.5);
+}
+
+.sidebar .brand {
+	font-weight: 700;
+	font-size: 1.125rem;
+	margin-bottom: 0.75rem;
+	color: #ffffff;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.nav a {
+	color: #cfe7ff;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 0.5rem 0.5rem;
+	border-radius: 8px;
+	transition: background 120ms ease, color 120ms ease;
+}
+
+.nav a:hover {
+	background: rgba(255, 255, 255, 0.03);
+	color: #ffffff;
+}
+
+.nav a.active {
+	background: linear-gradient(90deg, rgba(37,99,235,0.12), rgba(96,165,250,0.08));
+	color: #ffffff;
+}
+
+.meta {
+	margin-top: 1rem;
+	font-size: 0.95rem;
+	color: #cbd5e1;
+	line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+	.sidebar { position: static; height: auto; min-width: 160px; }
+}

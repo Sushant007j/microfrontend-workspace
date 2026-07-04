@@ -1,11 +1,14 @@
 <section class="products">
   <h2>Products</h2>
+
   <div class="product-list">
-    <button type="button" class="product-card" *ngFor="let product of products" (click)="selectProduct(product)">
-      <strong>{{ product.name }}</strong>
-      <span>{{ product.category }}</span>
-      <span>{{ product.price | currencyFormat }}</span>
-    </button>
+    @for (product of products(); track product.id) {
+      <button type="button" class="product-card" (click)="selectProduct(product)">
+        <strong>{{ product.name }}</strong>
+        <span>{{ product.category }}</span>
+        <span>{{ product.price | currencyFormat }}</span>
+      </button>
+    }
   </div>
   <div class="selection" *ngIf="appState.selectedProduct() as selected">
     <h3>Selected product</h3>

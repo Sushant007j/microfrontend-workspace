@@ -1,13 +1,17 @@
 <header class="header">
   <div class="brand">Micro Frontend Shell</div>
+    @if(appState.currentUser() != null) {
   <nav class="nav-links">
     <a routerLink="/">Home</a>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/products">Products</a>
     <a routerLink="/users">Users</a>
   </nav>
+
   <div class="status">
     <span>{{ appState.currentUser()?.name ?? 'Guest' }}</span>
     <button type="button" (click)="logout()">Logout</button>
+     
   </div>
+} 
 </header>

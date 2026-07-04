@@ -5,6 +5,7 @@ import { Product } from '../models/product';
 @Injectable({ providedIn: 'root' })
 export class ProductService {
   getProducts() {
+    
     const products: Product[] = [
       { id: '1', name: 'Laptop', category: 'Hardware', price: 1299, description: 'High performance laptop' },
       { id: '2', name: 'Mouse', category: 'Accessories', price: 29, description: 'Ergonomic mouse' },

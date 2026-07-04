@@ -1,11 +1,17 @@
-<aside class="sidebar">
-  <h3>Workspace</h3>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/products">Products</a>
-  <a routerLink="/users">Users</a>
-  <div class="meta">
-    <p>Theme: {{ appState.theme() }}</p>
-    <p>Language: {{ appState.language() }}</p>
-    <p>Notifications: {{ appState.notificationCount() }}</p>
+<aside class="sidebar" role="navigation" aria-label="Workspace navigation">
+  <div class="sidebar-inner">
+    <div class="brand">Workspace</div>
+
+    <nav class="nav">
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
+      <a routerLink="/users" routerLinkActive="active">Users</a>
+    </nav>
+
+    <div class="meta">
+      <p><strong>Theme:</strong> {{ appState.theme() }}</p>
+      <p><strong>Language:</strong> {{ appState.language() }}</p>
+      <p><strong>Notifications:</strong> {{ appState.notificationCount() }}</p>
+    </div>
   </div>
 </aside>

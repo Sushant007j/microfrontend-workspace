@@ -1,7 +1,9 @@
 ﻿<div class="shell-layout">
   <app-header></app-header>
   <div class="shell-body">
+    @if(appState.currentUser() != null) {
     <app-sidebar></app-sidebar>
+    }
     <main class="content-area">
       <router-outlet></router-outlet>
     </main>

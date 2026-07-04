@@ -3,24 +3,31 @@ import { authGuard } from 'shared';
 import { HomeComponent } from './layout/home/home';
 import { LoginComponent } from './pages/login/login';
 import { NotFoundComponent } from './pages/not-found/not-found';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 
 export const routes: Routes = [
+ 
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent, canActivate: [authGuard] },
   {
     path: 'dashboard',
     canActivate: [authGuard],
-    loadComponent: () => import('../../../dashboard/src/app/pages/dashboard/dashboard').then((m) => m.DashboardComponent),
+    loadChildren: () =>
+      loadRemoteModule('dashboard', './routes').then(
+        (m) => m.routes
+      ),
   },
   {
     path: 'products',
     canActivate: [authGuard],
-    loadComponent: () => import('../../../products/src/app/pages/products/products').then((m) => m.ProductsComponent),
+    loadChildren: () =>
+      loadRemoteModule('products', './routes').then((m) => m.routes),
   },
   {
     path: 'users',
     canActivate: [authGuard],
-    loadComponent: () => import('../../../users/src/app/pages/users/users').then((m) => m.UsersComponent),
+    loadChildren: () =>
+      loadRemoteModule('users', './routes').then((m) => m.routes),
   },
   { path: '**', component: NotFoundComponent },
 ];

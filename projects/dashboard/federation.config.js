@@ -1,10 +1,11 @@
+const path = require('path');
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
   name: 'dashboard',
 
   exposes: {
-    './Component': './projects/dashboard/src/app/app.ts',
+        './routes': './projects/dashboard/src/app/app.routes.ts',
   },
 
   shared: {

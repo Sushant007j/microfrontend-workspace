@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<section class="dashboard">
+  <h2>Dashboard</h2>
+  <div class="stats">
+    <div class="card">
+      <h3>Current User</h3>
+      <p>{{ appState.currentUser()?.name ?? 'Guest' }}</p>
+    </div>
+    <div class="card">
+      <h3>Total Products</h3>
+      <p>{{ productCount }}</p>
+    </div>
+    <div class="card">
+      <h3>Notifications</h3>
+      <p>{{ notifications.length }}</p>
+    </div>
+    <div class="card">
+      <h3>Theme</h3>
+      <p>{{ appState.theme() }}</p>
+    </div>
+    <div class="card">
+      <h3>Language</h3>
+      <p>{{ appState.language() }}</p>
+    </div>
+  </div>
+  <div class="notifications">
+    <h3>Live alerts</h3>
+    <ul>
+      <li *ngFor="let item of notifications">{{ item.message }}</li>
+    </ul>
+  </div>
+</section>

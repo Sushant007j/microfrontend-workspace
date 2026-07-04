@@ -1,0 +1,15 @@
+<section class="login-card">
+  <h2>Sign in</h2>
+  <form (ngSubmit)="submit()">
+    <label>
+      Username
+      <input [(ngModel)]="username" name="username" />
+    </label>
+    <label>
+      Password
+      <input type="password" [(ngModel)]="password" name="password" />
+    </label>
+    <button type="submit">Login</button>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+</section>

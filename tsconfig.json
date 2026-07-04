@@ -12,7 +12,7 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
-      "shared": ["./dist/shared"]
+      "shared": ["./projects/shared/src/public-api.ts"]
     },
     "importHelpers": true,
     "target": "ES2022",

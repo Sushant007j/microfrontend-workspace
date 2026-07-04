@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AppStateService } from 'shared';
 
 @Component({
   selector: 'app-users',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './users.html',
   styleUrl: './users.scss',
 })
-export class Users {}
+export class UsersComponent {
+  readonly appState = inject(AppStateService);
+}

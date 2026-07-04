@@ -1,1 +1,11 @@
-<p>sidebar works!</p>
+<aside class="sidebar">
+  <h3>Workspace</h3>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/products">Products</a>
+  <a routerLink="/users">Users</a>
+  <div class="meta">
+    <p>Theme: {{ appState.theme() }}</p>
+    <p>Language: {{ appState.language() }}</p>
+    <p>Notifications: {{ appState.notificationCount() }}</p>
+  </div>
+</aside>

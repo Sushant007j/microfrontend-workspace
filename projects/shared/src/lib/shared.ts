@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'lib-shared',
-  imports: [],
-  template: ` <p>shared works!</p> `,
-  styles: ``,
-})
-export class Shared {}
+export * from './components/navbar/navbar';
+export * from './components/loader/loader';
+export * from './components/card/card';
+export * from './components/button/button';
+export * from './directives/highlight';
+export * from './pipes/currency-format-pipe';
+export * from './pipes/date-pipe';

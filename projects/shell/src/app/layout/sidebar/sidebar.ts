@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { AppStateService } from 'shared';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
-export class Sidebar {}
+export class SidebarComponent {
+  readonly appState = inject(AppStateService);
+}

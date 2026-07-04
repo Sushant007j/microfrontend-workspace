@@ -1,5 +1,17 @@
-/*
- * Public API Surface of shared
- */
-
 export * from './lib/shared';
+export * from './lib/models/user';
+export * from './lib/models/product';
+export * from './lib/models/notification';
+export * from './lib/models/theme';
+export * from './lib/models/language';
+export * from './lib/interfaces/api-response';
+export * from './lib/interfaces/pagination';
+export * from './lib/services/app-state.service';
+export * from './lib/services/auth.service';
+export * from './lib/services/notification.service';
+export * from './lib/services/theme.service';
+export * from './lib/services/language.service';
+export * from './lib/services/product.service';
+export * from './lib/services/user.service';
+export * from './lib/guards/auth-guard';
+export * from './lib/interceptors/auth-interceptor';

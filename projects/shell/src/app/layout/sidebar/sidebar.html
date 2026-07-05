@@ -1,17 +1,42 @@
 <aside class="sidebar" role="navigation" aria-label="Workspace navigation">
-  <div class="sidebar-inner">
-    <div class="brand">Workspace</div>
+  <div class="sidebar-head">
+    <div class="sidebar-title">My Menu</div>
+    <button class="close-btn" aria-label="Close sidebar">×</button>
+  </div>
 
-    <nav class="nav">
-      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
-      <a routerLink="/products" routerLinkActive="active">Products</a>
-      <a routerLink="/users" routerLinkActive="active">Users</a>
-    </nav>
-
-    <div class="meta">
+  <nav class="sidebar-nav">
+    <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <span class="icon icon-dashboard" aria-hidden="true"></span>
+      Dashboard
+    </a>
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <span class="icon icon-shortcuts" aria-hidden="true"></span>
+      Dashboard
+    </a>
+    <a routerLink="/products" routerLinkActive="active">
+      <span class="icon icon-overview" aria-hidden="true"></span>
+      Products
+    </a>
+    <a routerLink="/users" routerLinkActive="active">
+      <span class="icon icon-events" aria-hidden="true"></span>
+      Users
+    </a>
+    <a routerLink="/about" routerLinkActive="active">
+      <span class="icon icon-about" aria-hidden="true"></span>
+      About
+    </a>
+    <a routerLink="/services" routerLinkActive="active">
+      <span class="icon icon-services" aria-hidden="true"></span>
+      Services
+    </a>
+    <a routerLink="/contact" routerLinkActive="active">
+      <span class="icon icon-contact" aria-hidden="true"></span>
+      Contact
+    </a>
+  </nav>
+     <div class="meta">
       <p><strong>Theme:</strong> {{ appState.theme() }}</p>
       <p><strong>Language:</strong> {{ appState.language() }}</p>
       <p><strong>Notifications:</strong> {{ appState.notificationCount() }}</p>
     </div>
-  </div>
 </aside>
